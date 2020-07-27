@@ -7,7 +7,7 @@ on:
     - cron: "0 0 */1 * *"
 jobs:
   build:
-    runs-on: ubuntu-16.04
+    runs-on: alpine
     steps:
     - uses: actions/checkout@master
     - uses: actions/setup-go@v1
