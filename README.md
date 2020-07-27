@@ -1,0 +1,1 @@
+Deploy with git action using setup-go.
