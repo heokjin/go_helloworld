@@ -1,3 +1,10 @@
+name: 새로 올라온 직거래 방 정보 받아오기
+on:
+  push:
+    branches:
+      - master
+  schedule:
+    - cron: "0 0 */1 * *"
 steps:
 - uses: actions/checkout@master
 - uses: actions/setup-go@v1
