@@ -5,9 +5,12 @@ on:
       - master
   schedule:
     - cron: "0 0 */1 * *"
-steps:
-- uses: actions/checkout@master
-- uses: actions/setup-go@v1
-  with:
-    go-version: '1.14.1' 
-- run: go run main.go
+jobs:
+  build:
+    runs-on: alpine:3.12.0
+    steps:
+    - uses: actions/checkout@master
+    - uses: actions/setup-go@v1
+      with:
+        go-version: '1.14.1'
+    - run: go run main.go
